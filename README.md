@@ -11,6 +11,6 @@ In this program, There is a tool to convert files among CSV, XML and JSON format
   
 ● The sample command line usage converting from XML to JSON as follows:
 
-    python student_id.py test.xml test.json 3
+    python test.py test.xml test.json 3
     
 ● For XML operations, you should use xml.etree.ElementTree and for JSON operations you should use json library of python. XSD validation should be implemented using etree library under lxml.Any other libraries for file types other than these are not allowed.
