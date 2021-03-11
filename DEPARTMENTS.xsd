@@ -1,0 +1,55 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="deparments">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element minOccurs="1" maxOccurs="unbounded" name="university">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element minOccurs="1" maxOccurs="unbounded" name="item">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element minOccurs="0" name="name">
+           <xsd:complexType>
+            <xsd:simpleContent>
+             <xsd:extension base="xsd:string">
+              <xsd:attribute name="lang" type="xsd:string" use="required" />
+              <xsd:attribute name="second" type="xsd:string" use="required" />
+             </xsd:extension>
+            </xsd:simpleContent>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="period" type="xsd:unsignedByte" />
+          <xsd:element minOccurs="0" name="quota">
+           <xsd:complexType>
+            <xsd:simpleContent>
+             <xsd:extension base="xsd:unsignedByte">
+              <xsd:attribute name="spec" type="xsd:unsignedByte" use="required" />
+             </xsd:extension>
+            </xsd:simpleContent>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="field" type="xsd:string" />
+          <xsd:element minOccurs="0" name="last_min_score">
+           <xsd:complexType>
+            <xsd:simpleContent>
+             <xsd:extension base="xsd:string">
+              <xsd:attribute name="order" type="xsd:unsignedInt" use="required" />
+             </xsd:extension>
+            </xsd:simpleContent>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="grant" type="xsd:string" />
+         </xsd:sequence>
+         <xsd:attribute name="faculty" type="xsd:string" use="required" />
+         <xsd:attribute name="id" type="xsd:unsignedInt" use="required" />
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="name" type="xsd:string" use="required" />
+      <xsd:attribute name="uType" type="xsd:string" use="required" />
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>
